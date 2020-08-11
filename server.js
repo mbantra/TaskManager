@@ -3,6 +3,7 @@ const EventEmitter = require('events');
 class Server extends EventEmitter {
     constructor(client) {
         super();
+        this.tasks = {};
         client.on('command', (command) => {
             console.log(`Command: ${command}`);
             //commands to be implemented: add, list, delete
